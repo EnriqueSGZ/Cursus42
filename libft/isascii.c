@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 14:02:15 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/11 14:04:22 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/11 14:26:25 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,13 @@ char ft_isascii(char *str)
     }
     
 }
-
+/*
 #include <stdio.h>
 int	main(void)
 {
-    char	test[] = "1236456";
+    char	test[] = "sánchez";
 
    	ft_isascii(test);
 	printf("%d\n", (ft_isascii(test)));
 	return (0);
-}
+}*/
