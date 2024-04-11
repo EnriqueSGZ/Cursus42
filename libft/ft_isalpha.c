@@ -6,11 +6,11 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 18:33:45 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/11 12:08:42 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/11 12:17:39 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int ft_isalpha(unisgned int i)
 {
-    i = 0;ghgfghd
+    i = 0;
 }
