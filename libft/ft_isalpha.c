@@ -6,41 +6,29 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 18:33:45 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/12 15:50:05 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/12 16:48:41 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_isalpha(char str[])
+int	ft_isalpha(int c)
 {
-	int		i;
-	
-	i = 0;
-	if (str[0] == '\0')
+	if ((c >= 'A' && c <= 'Z')
+		|| (c >= 'a' && c <= 'z'))
 	{
 		return (1);
 	}
 	else
 	{
-		i = 0;
-		while (str[i] != '\0')
-		{
-			if (!(((str[i] >= 'A') && (str[i] <= 'Z'))
-					|| ((str[i] >= 'a') && (str[i] <= 'z'))))
-			{
-				return (0);
-			}
-			i++;
-		}
-		return (1);
+		return (0);
 	}
 }
 /*
 #include <stdio.h>
 int	main(void)
 {
-    char	test[] = "H0la";
+    char	c;
 
-   	ft_isalpha(test);
-	printf("%d\n", (ft_isalpha(test)));
+	c = 'a';
+	printf("%d\n", (ft_isalpha(c)));
 	return (0);
 }*/

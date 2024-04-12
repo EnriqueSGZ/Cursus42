@@ -6,38 +6,28 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 15:31:40 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/12 15:51:30 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/12 17:06:55 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_isdigit(char *str)
+int	ft_isdigit(int c)
 {
-	int		i;
-	i = 0;
-	if (str[0] == '\0')
+	if ((c >= '0' && c <= '9'))
 	{
-		return (0);
+		return (1);
 	}
 	else
 	{
-		while (str[i] != '\0')
-		{
-			if (!((str[i] >= '0') && (str[i] <= '9')))
-			{
-				return (0);
-			}
-			i++;
-		}
-		return (1);
+		return (0);
 	}
 }
 /*
 #include <stdio.h>
 int	main(void)
 {
-    char	test[] = "1236456";
+    char	c;
 
-   	ft_isdigit(test);
-	printf("%d\n", (ft_isdigit(test)));
+	c = 'a';
+	printf("%d\n", (ft_isdigit(c)));
 	return (0);
 }*/

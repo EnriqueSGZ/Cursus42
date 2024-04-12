@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/11 14:38:26 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/12 17:07:56 by ensanche         ###   ########.fr       */
+/*   Created: 2024/04/12 16:10:49 by ensanche          #+#    #+#             */
+/*   Updated: 2024/04/12 18:55:57 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-int	ft_isprint(int c)
+int	ft_strlen(char *str)
 {
-	if ((c >= 32 && c <= 126))
+	int		i;
+
+	i = 0;
+	while (str[i] != '\0')
 	{
-		return (1);
+		i++;
 	}
-	else
-	{
-		return (0);
-	}
+	return (i);
 }
 /*
 #include <stdio.h>
-int	main(void)
+int main(void)
 {
-    char	c;
-
-	c = 'a';
-	printf("%d\n", (ft_isprint(c)));
-	return (0);
+    char    str[] = "123456";
+    
+    printf("%d\n", ft_strlen(str));
+    return (0);
 }*/
