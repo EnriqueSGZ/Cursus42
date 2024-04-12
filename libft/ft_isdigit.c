@@ -5,33 +5,31 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/11 13:03:25 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/11 13:23:54 by ensanche         ###   ########.fr       */
+/*   Created: 2024/04/12 15:31:40 by ensanche          #+#    #+#             */
+/*   Updated: 2024/04/12 15:51:30 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char ft_isdigit(char *str)
+char	ft_isdigit(char *str)
 {
-    int i;
-
-    i = 0;
-    if (str[0] == '\0')
-    {
-       return (0);
-    }
-   else
-   {
-        while (str[i] != '\0')
-        {
-            if (!((str[i] >= '0') && (str[i] <= '9')))
-            {
-                return (0);
-            }
-            i++;
-        }
-        return (1);
-    }
-    
+	int		i;
+	i = 0;
+	if (str[0] == '\0')
+	{
+		return (0);
+	}
+	else
+	{
+		while (str[i] != '\0')
+		{
+			if (!((str[i] >= '0') && (str[i] <= '9')))
+			{
+				return (0);
+			}
+			i++;
+		}
+		return (1);
+	}
 }
 /*
 #include <stdio.h>

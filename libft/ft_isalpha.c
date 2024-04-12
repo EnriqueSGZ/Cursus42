@@ -6,15 +6,15 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 18:33:45 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/11 13:00:35 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/12 15:50:05 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char ft_isalpha(char str[])
+char	ft_isalpha(char str[])
 {
-    int i;
-    
-    i = 0;
+	int		i;
+	
+	i = 0;
 	if (str[0] == '\0')
 	{
 		return (1);

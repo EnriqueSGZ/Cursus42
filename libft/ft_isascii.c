@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isascii.c                                          :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 14:02:15 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/11 14:26:25 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/12 16:04:50 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char ft_isascii(char *str)
+char    ft_isascii(char *str)
 {
-    int i;
-
+    int     i;
+    
     i = 0;
     if (str[0] == '\0')
     {
-       return (0);
+    return (0);
     }
-   else
-   {
+    else
+    {
         while (str[i] != '\0')
         {
             if (!((str[i] >= 0) && (str[i] <= 127)))
@@ -30,9 +30,9 @@ char ft_isascii(char *str)
             i++;
         }
         return (1);
-    }
-    
+    }    
 }
+
 /*
 #include <stdio.h>
 int	main(void)
