@@ -6,11 +6,12 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 18:57:59 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/14 19:31:35 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/14 19:43:40 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
+#include <string.h>
+size_t  ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t  i;
     
@@ -29,7 +30,7 @@ size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
 int main(void)
 {
     char    src[] = "abdesdf";
-    char    dst[] = "67890"; 
+    char    dst[] = "12345678"; 
     size_t  dstsize = sizeof(dst);
     
     ft_strlcpy(dst, src, dstsize);
