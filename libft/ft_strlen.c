@@ -6,10 +6,11 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 16:10:49 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/12 18:55:57 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/12 19:19:28 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_strlen(char *str)
+
+int     ft_strlen(const char *str)
 {
 	int		i;
 
