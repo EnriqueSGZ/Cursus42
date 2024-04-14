@@ -6,11 +6,11 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 13:27:50 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/12 16:53:15 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/14 15:54:23 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
+int	ft_isalnum(char c)
 {
 	if ((c >= 'A' && c <= 'Z')
 		|| (c >= 'a' && c <= 'z')

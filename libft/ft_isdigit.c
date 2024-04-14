@@ -6,11 +6,11 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 15:31:40 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/12 17:06:55 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/14 15:54:40 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+int	ft_isdigit(char c)
 {
 	if ((c >= '0' && c <= '9'))
 	{

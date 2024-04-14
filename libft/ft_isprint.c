@@ -6,11 +6,11 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 14:38:26 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/12 17:07:56 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/14 15:54:45 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+int	ft_isprint(char c)
 {
 	if ((c >= 32 && c <= 126))
 	{

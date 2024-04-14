@@ -6,27 +6,27 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 16:10:49 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/12 19:19:28 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/14 17:19:16 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int     ft_strlen(const char *str)
+/*#include <string.h>
+#include <stdio.h>*/
+size_t	ft_strlen(const char *s)
 {
-	int		i;
+	size_t	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (s[i] != '\0')
 	{
 		i++;
 	}
 	return (i);
 }
 /*
-#include <stdio.h>
 int main(void)
 {
-    char    str[] = "123456";
-    
-    printf("%d\n", ft_strlen(str));
-    return (0);
+    char a[] = "Str son 9";
+    printf("%zu", ft_strlen(a));
+    return(0);
 }*/

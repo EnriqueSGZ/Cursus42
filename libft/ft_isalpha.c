@@ -6,11 +6,11 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 18:33:45 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/12 16:48:41 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/14 15:54:29 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+int	ft_isalpha(char c)
 {
 	if ((c >= 'A' && c <= 'Z')
 		|| (c >= 'a' && c <= 'z'))
