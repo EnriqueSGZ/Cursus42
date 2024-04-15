@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 18:57:59 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/14 19:43:40 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/15 13:20:47 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ size_t  ft_strlcpy(char *dst, const char *src, size_t dstsize)
     dst[i] = '\0';
 	return (i);
 }
+/*
 #include <stdio.h>
 #include <string.h>
-
 int main(void)
 {
     char    src[] = "abdesdf";
@@ -38,5 +38,5 @@ int main(void)
     printf("Cadena copiada: %s\n", dst);
 
     return 0;
-}
+}*/
 
