@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 19:27:58 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/22 20:43:23 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/22 20:57:42 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,13 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	if (size > dstlen)
 	{
 		spaceleft = size - dstlen - 1;
+		while (i < spaceleft && src[i] != '\0')
+		{
+			dst[dstlen + 1] = src[i];
+			i++;
+		}
+		dst[dstlen + 1] = '\0';
 	}
-	else
-	{
-		spaceleft = 0;
-	}
-	while (i < spaceleft && src[i] != '\0')
-	{
-		dst[dstlen + i] = src[i];
-		i++;
-	}
-	dst[dstlen + i] = '\0';
 	return (dstlen + srclen);
 }
 /*
