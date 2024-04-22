@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 19:27:58 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/22 18:47:08 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/22 18:58:36 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dstlen = 0;
 	srclen = 0;
 	i = 0;
-	while (dst[dstlen] != '\0')
-	{
-		dstlen++;
-	}
-	while (src[srclen] != '\0')
-	{
-		srclen++;
-	}
+	ft_strlen(dstlen);
+	ft_strlen(srclen);
 	if (size > dstlen)
 	{
 		spaceleft = size - dstlen - 1;
@@ -46,7 +40,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[dstlen + i] = '\0';
 	return (dstlen + srclen);
 }
-
+/*
 int	main(void) 
 {
 	char	dst[20] = "Pedro";
@@ -57,4 +51,4 @@ int	main(void)
 	printf("Concatena string: %s\n", dst);
 	printf("nuevo tamaño: %zu\n", newlen);
 	return (0);
-}
+}*/
