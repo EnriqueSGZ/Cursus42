@@ -6,12 +6,11 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 16:10:49 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/16 18:01:07 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/22 18:47:32 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

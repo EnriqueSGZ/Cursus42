@@ -6,9 +6,11 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 14:02:15 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/14 15:54:34 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/22 18:46:14 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isascii(char c)
 {
@@ -22,7 +24,6 @@ int	ft_isascii(char c)
 	}
 }
 /*
-#include <stdio.h>
 int	main(void)
 {
     char	c;

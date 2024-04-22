@@ -6,11 +6,11 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 18:04:39 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/22 18:21:00 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/22 18:45:43 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <strings.h>
+#include "libft.h"
 
 void	bzero(void *s, size_t n)
 {

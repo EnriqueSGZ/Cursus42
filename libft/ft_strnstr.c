@@ -6,11 +6,11 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 16:15:28 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/22 15:54:43 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/22 18:47:43 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *str, const char *needle, size_t len)
 {

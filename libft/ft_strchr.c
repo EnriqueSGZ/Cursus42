@@ -6,12 +6,11 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 13:24:18 by codespace         #+#    #+#             */
-/*   Updated: 2024/04/16 17:32:48 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/22 18:46:58 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

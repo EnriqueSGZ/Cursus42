@@ -6,11 +6,11 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 17:46:46 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/22 18:05:35 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/22 18:45:36 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
