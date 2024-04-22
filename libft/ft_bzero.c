@@ -6,13 +6,13 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 18:04:39 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/22 19:19:26 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/22 19:22:25 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	size_t	i;
 	char	*array;
@@ -28,6 +28,8 @@ void	bzero(void *s, size_t n)
 int	main(void)
 {
 	char	str[] = "Hola buenas";
-
+	size_t	size = 4;
+	
+	printf("%s\n", ft_bzero())
 
 }
