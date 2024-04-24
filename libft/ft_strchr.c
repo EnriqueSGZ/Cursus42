@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 13:24:18 by codespace         #+#    #+#             */
-/*   Updated: 2024/04/22 19:15:57 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/24 16:49:10 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,6 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s);
 		}
 		s++;
-	}
-	if (*s == '\0')
-	{
-		return ((char *) s);
 	}
 	return (NULL);
 }
