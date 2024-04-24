@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 13:24:18 by codespace         #+#    #+#             */
-/*   Updated: 2024/04/24 16:49:10 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/24 20:32:53 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	c = (unsigned char) c;
+	c = (unsigned char)c;
 	while (*s != '\0')
 	{
 		if (*s == c)
@@ -22,6 +22,10 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s);
 		}
 		s++;
+	}
+	if (*s == c)
+	{
+		return ((char *)s);
 	}
 	return (NULL);
 }
