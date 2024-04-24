@@ -6,13 +6,13 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 14:38:26 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/22 18:46:52 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/24 18:27:31 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(char c)
+int	ft_isprint(int c)
 {
 	if ((c >= 32 && c <= 126))
 	{

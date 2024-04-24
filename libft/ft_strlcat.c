@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 19:27:58 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/24 17:51:05 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/24 18:23:24 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,27 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	dstlen;
-	size_t	srclen;
-	size_t	i;
-	size_t	spaceleft;
+	size_t		dstlen;
+	size_t		totallen;
+	const char	*s;
 
-	srclen = 0;
-	i = 0;
-	dstlen = ft_strlen(dst);
-	srclen = ft_strlen(src);
-	if (size > dstlen)
+	if ((!dst || !src) && !size)
+		return (0);
+	s = src;
+	dstlen = 0;
+	while (*(dst + dstlen) && dstlen < size)
+		dstlen++;
+	if (dstlen < size)
+		totallen = dstlen + strlen(s);
+	else
+		return (size + strlen(s));
+	while (*s && (dstlen + 1) < size)
 	{
-		spaceleft = size - dstlen - 1;
-		while (i < spaceleft && src[i] != '\0')
-		{
-			dst[dstlen + i] = src[i];
-			i++;
-		}
-		dst[dstlen + i] = '\0';
+		*(dst + dstlen) = *s++;
+		dstlen++;
 	}
-	return (dstlen + srclen);
+	*(dst + dstlen) = '\0';
+	return (totallen);
 }
 /*
 int	main(void) 

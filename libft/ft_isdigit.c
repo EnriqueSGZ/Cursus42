@@ -6,13 +6,13 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 15:31:40 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/22 18:46:40 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/24 18:26:52 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(char c)
+int	ft_isdigit(int c)
 {
 	if ((c >= '0' && c <= '9'))
 	{

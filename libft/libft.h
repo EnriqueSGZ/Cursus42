@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 18:25:40 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/22 20:39:13 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/24 18:28:26 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
-int		ft_isalnum(char c);
-int		ft_isalpha(char c);
-int		ft_isascii(char c);
-int		ft_isdigit(char c);
-int		ft_isprint(char c);
+int		ft_isalnum(int c);
+int		ft_isalpha(int c);
+int		ft_isascii(int c);
+int		ft_isdigit(int c);
+int		ft_isprint(int c);
 char	*ft_strchr(const char *s, int c);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);

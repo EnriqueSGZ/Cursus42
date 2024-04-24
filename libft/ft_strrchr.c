@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 16:31:39 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/24 16:56:31 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/24 18:05:28 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,30 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	unsigned char	ch;
+	size_t			i;
 
 	i = 0;
+	ch = c;
 	while (s[i] != '\0')
 	{
 		i++;
 	}
-	while (i >= 0)
+	if (ch == 0)
 	{
-		if (s[i] == c)
-		{
-			return ((char *)&s[i]);
-		}
+		return ((char *)&s[i]);
+	}
+	while (i > 0)
+	{
 		i--;
+		if (s[i] == ch)
+		{
+			return (&((char *)s)[i]);
+		}
 	}
 	return (0);
 }
+
 /*
 int	main(void)
 {
