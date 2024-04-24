@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 18:57:59 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/24 20:24:53 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/24 21:42:20 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 
 	i = 0;
-	while (src[i] != '\0' && i < dstsize - 1)
+	while (src[i] != '\0' && i < dstsize)
 	{
 		dst[i] = src[i];
 		i++;
