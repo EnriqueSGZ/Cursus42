@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 18:25:40 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/24 18:28:26 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/24 19:05:00 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdio.h>
+# include <ctype.h>
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);

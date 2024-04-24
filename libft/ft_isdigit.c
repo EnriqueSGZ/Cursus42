@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 15:31:40 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/24 18:26:52 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/24 18:33:52 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,11 @@
 
 int	ft_isdigit(int c)
 {
-	if ((c >= '0' && c <= '9'))
+	if (c >= '0' && c <= '9')
 	{
 		return (1);
 	}
-	else
-	{
-		return (0);
-	}
+	return (0);
 }
 /*
 int	main(void)
