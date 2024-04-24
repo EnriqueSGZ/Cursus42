@@ -6,36 +6,36 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 19:27:58 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/24 18:23:24 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/24 20:18:56 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t		dstlen;
-	size_t		totallen;
-	const char	*s;
+	size_t	len;
+	size_t	i;
 
-	if ((!dst || !src) && !size)
-		return (0);
-	s = src;
-	dstlen = 0;
-	while (*(dst + dstlen) && dstlen < size)
-		dstlen++;
-	if (dstlen < size)
-		totallen = dstlen + strlen(s);
-	else
-		return (size + strlen(s));
-	while (*s && (dstlen + 1) < size)
+	len = 0;
+	i = 0;
+	while (dst[i] && i < dstsize)
 	{
-		*(dst + dstlen) = *s++;
-		dstlen++;
+		i++;
 	}
-	*(dst + dstlen) = '\0';
-	return (totallen);
+	len = i;
+	while (src[i - len] && i + 1 < dstsize)
+	{
+		dst[i] = src[i - len];
+		i++;
+	}
+	if (len < dstsize)
+	{
+		dst[i] = '\0';
+	}
+	return (len + ft_strlen(src));
 }
+
 /*
 int	main(void) 
 {
