@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 13:24:18 by codespace         #+#    #+#             */
-/*   Updated: 2024/04/24 20:32:53 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/25 12:37:33 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,20 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	c = (unsigned char)c;
+	c = (unsigned char)c;// Carácter c a un unsigned char para evitar problemas con signo
 	while (*s != '\0')
 	{
 		if (*s == c)
 		{
-			return ((char *)s);
+			return ((char *)s);//Retorna un puntero al carácter encontrado
 		}
 		s++;
 	}
-	if (*s == c)
+	if (*s == c)// Verifica si se busca null
 	{
 		return ((char *)s);
 	}
-	return (NULL);
+	return (NULL);// Si no se encuentra, devuelve null
 }
 /*
 int	main(void)

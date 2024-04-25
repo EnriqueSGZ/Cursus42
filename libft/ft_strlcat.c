@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 19:27:58 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/24 20:18:56 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/04/25 12:43:55 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,21 +19,24 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	len = 0;
 	i = 0;
+	// Encuentra longitud actual del dst (hasta carácter nulo o tamaño max)
 	while (dst[i] && i < dstsize)
 	{
 		i++;
 	}
-	len = i;
+	len = i;// Almacena la longitud actual del destino en len
+	// Copia src al destino, teniendo en cuenta tamaño máx del dst
 	while (src[i - len] && i + 1 < dstsize)
 	{
-		dst[i] = src[i - len];
+		dst[i] = src[i - len];// Copia el carácter actual de src a dst
 		i++;
 	}
+	// Añade el carácter nulo al final del destino si hay espacio suficiente
 	if (len < dstsize)
 	{
 		dst[i] = '\0';
 	}
-	return (len + ft_strlen(src));
+	return (len + ft_strlen(src));// Retorna len total de la cadena concatenada
 }
 
 /*
