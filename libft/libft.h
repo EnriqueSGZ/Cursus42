@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 18:25:40 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/24 19:05:00 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/05/01 17:13:08 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,6 @@ char	*ft_strnstr(const char *str, const char *needle, size_t len);
 char	*ft_strrchr(const char *s, int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+void	*ft_memchr(const void *s, int c, size_t n);
 
 #endif
