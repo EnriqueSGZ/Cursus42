@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 19:27:58 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/25 12:43:55 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/05/01 16:58:15 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	len = 0;
 	i = 0;
-	// Encuentra longitud actual del dst (hasta carácter nulo o tamaño max)
+	//Encuentra longitud actual del dst (hasta carácter nulo o tamaño max)
 	while (dst[i] && i < dstsize)
 	{
 		i++;

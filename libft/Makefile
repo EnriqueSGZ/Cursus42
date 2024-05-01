@@ -6,7 +6,7 @@
 #    By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/22 18:27:44 by ensanche          #+#    #+#              #
-#    Updated: 2024/04/25 11:13:54 by ensanche         ###   ########.fr        #
+#    Updated: 2024/05/01 17:07:50 by ensanche         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ OBJECTS = $(SOURCES:.c=.o)
 CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
-all: $(NAME) clean
+all: $(NAME)
 
 $(NAME): $(OBJECTS)
 	$(AR) -r $@ $?
