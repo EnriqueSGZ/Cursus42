@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 17:11:50 by ensanche          #+#    #+#             */
-/*   Updated: 2024/05/01 18:49:01 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/05/01 18:57:38 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	ch = (char) c;
 	str = (const char *)s;
-	if (n == 0)
-	{
-		return (NULL);
-	}
-	while ((str[i] != '\0') && (i < n))
+	while (i < n)
 	{
 		if (str[i] == ch)
 		{
@@ -34,15 +30,15 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		}
 		i++;
 	}
-	return (&((void *)str)[i]);
+	return (NULL);
 }
-
+/*
 int	main(void)
 {
-	char	str[] = "Lia el taco";
-	char	c = 't';
-	size_t	l = 3;
+	char	str[] = "esto no va";
+	char	c = 'n';
+	size_t	l = 11;
 
 	printf("%s\n", ft_memchr(str, c, l));
 	return (0);
-}
+}*/
