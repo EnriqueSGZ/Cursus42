@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 17:44:56 by ensanche          #+#    #+#             */
-/*   Updated: 2024/05/03 17:46:02 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/05/03 18:25:41 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,30 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
+	char	*char_dst;
+	char	*char_src;
+	int		i;
 
+	i = 0;
+	char_dst = (char *)dst;
+	char_src = (char *)src;
+	while (i < n)
+	{
+		char_dst[i] = char_src[i];
+		i++;
+	}
+	return (char_dst);
+}
+
+#include <stdio.h>
+
+int	main(void)
+{
+	char	src[] = "esto se va a copiar a destino";
+	char	dst[] = "";
+	size_t	n = 30;
+
+	ft_memcpy(dst, src, n);
+	printf("%s\n", dst);
+	return (0);
 }
