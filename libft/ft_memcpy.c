@@ -1,41 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/01 20:23:22 by ensanche          #+#    #+#             */
-/*   Updated: 2024/05/03 17:45:04 by ensanche         ###   ########.fr       */
+/*   Created: 2024/05/03 17:44:56 by ensanche          #+#    #+#             */
+/*   Updated: 2024/05/03 17:46:02 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t				i;
-	unsigned char		ch;
-	char				*str;
 
-	i = 0;
-	ch = (unsigned char) c;
-	str = (char *)b;
-	while (i < len)
-	{
-		str[i] = ch;
-		i++;
-	}
-	return (str);
 }
-/*
-int	main(void)
-{
-	char			str[] = "Hola Buenas";
-	int				c = 128;
-	size_t			len = 5;
-
-	ft_memset(str, c, len);
-	printf("%sç\n", str);
-	return (0);
-}*/
