@@ -6,38 +6,32 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 17:39:29 by ensanche          #+#    #+#             */
-/*   Updated: 2024/05/06 20:12:17 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/05/06 22:12:26 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char	*chardst;
-	char	*charsrc;
-	size_t	i;
+	char		*chardst;
+	const char	*charsrc;
 
-	i = 0;
 	chardst = (char *)dst;
-	charsrc = (char *)src;
-	if (dst < src)
+	charsrc = (const char *)src;
+	if (!dst && !src)
+		return (dst);
+	if (dst == src)
+		return (dst);
+	if (dst > src)
 	{
-		while (len > 0)
+		while (len--)
 		{
-			chardst[i] = charsrc[i];
-			len--;
+			chardst[len] = charsrc[len];
 		}
 	}
 	else
-	{
-		while (i < len)
-		{
-			chardst[i] = charsrc[i];
-			i++;
-		}
-	}
+		ft_memcpy(dst, src, len);
 	return (dst);
 }
 /*
@@ -48,6 +42,6 @@ int	main(void)
 	size_t	size = 5;
 
 	ft_memmove(dst, str, size);
-	printf("%s\n", str);
+	printf("%s\n", dst);
 	return (0);
 }*/
