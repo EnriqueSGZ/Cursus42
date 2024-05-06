@@ -1,47 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/03 17:44:56 by ensanche          #+#    #+#             */
-/*   Updated: 2024/05/06 23:01:44 by ensanche         ###   ########.fr       */
+/*   Created: 2024/05/06 22:14:36 by ensanche          #+#    #+#             */
+/*   Updated: 2024/05/06 22:55:55 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	char	*chardst;
-	char	*charsrc;
-	size_t	i;
+	const char	*str1;
+	const char	*str2;
+	size_t		i;
 
+	str1 = (const char *)s1;
+	str2 = (const char *)s2;
 	i = 0;
-	chardst = (char *)dst;
-	charsrc = (char *)src;
-	if (!dst && !src)
+	while (n--)
 	{
-		return (0);
-	}
-	while (i < n)
-	{
-		chardst[i] = charsrc[i];
+		if (str1[i] != str2[i])
+		{
+			return ((unsigned char)str1[i] - (unsigned char)str2[i]);
+		}
 		i++;
 	}
-	return (chardst);
+	return (0);
 }
 /*
-#include <stdio.h>
-
 int	main(void)
 {
-	char	src[] = "esto se va a copiar a destino";
-	char	dst[] = "";
-	size_t	n = 30;
+	char	s1[] = "abc";
+	char	s2[] = "abc";
+	size_t	size = 7;
 
-	ft_memcpy(dst, src, n);
-	printf("%s\n", dst);
+	printf("%d\n", (memcmp(s1, s2, size)));
+	printf("%d\n", (ft_memcmp(s1, s2, size)));
 	return (0);
 }*/
