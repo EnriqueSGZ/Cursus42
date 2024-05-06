@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/03 17:44:56 by ensanche          #+#    #+#             */
-/*   Updated: 2024/05/06 17:37:53 by ensanche         ###   ########.fr       */
+/*   Created: 2024/05/06 17:39:29 by ensanche          #+#    #+#             */
+/*   Updated: 2024/05/06 18:46:30 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
+#include <stdio.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	char	*chardst;
 	char	*charsrc;
@@ -21,23 +23,16 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	i = 0;
 	chardst = (char *)dst;
 	charsrc = (char *)src;
-	while (i < n)
-	{
-		chardst[i] = charsrc[i];
-		i++;
-	}
-	return (dst);
+	if (!dst && !src)
+		return (NULL);
+	while ()
 }
-/*
-#include <stdio.h>
-
 int	main(void)
 {
-	char	src[] = "esto se va a copiar a destino";
-	char	dst[] = "";
-	size_t	n = 30;
-
-	ft_memcpy(dst, src, n);
-	printf("%s\n", dst);
+	char	str[] = "origen destino";
+	memmove(str, &str[7], 7);
+	printf("%p\n", str);
+	memcpy(str, &str[7], 7);
+	printf("%p\n", str);
 	return (0);
-}*/
+}
