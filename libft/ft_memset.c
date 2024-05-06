@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 20:23:22 by ensanche          #+#    #+#             */
-/*   Updated: 2024/05/03 17:45:04 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/05/06 20:27:07 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,13 @@
 void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t				i;
-	unsigned char		ch;
 	char				*str;
 
 	i = 0;
-	ch = (unsigned char) c;
 	str = (char *)b;
 	while (i < len)
 	{
-		str[i] = ch;
+		str[i] = c;
 		i++;
 	}
 	return (str);

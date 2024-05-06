@@ -6,12 +6,11 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 17:39:29 by ensanche          #+#    #+#             */
-/*   Updated: 2024/05/06 18:46:30 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/05/06 20:12:17 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 #include <stdio.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
@@ -23,16 +22,32 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	i = 0;
 	chardst = (char *)dst;
 	charsrc = (char *)src;
-	if (!dst && !src)
-		return (NULL);
-	while ()
+	if (dst < src)
+	{
+		while (len > 0)
+		{
+			chardst[i] = charsrc[i];
+			len--;
+		}
+	}
+	else
+	{
+		while (i < len)
+		{
+			chardst[i] = charsrc[i];
+			i++;
+		}
+	}
+	return (dst);
 }
+/*
 int	main(void)
 {
-	char	str[] = "origen destino";
-	memmove(str, &str[7], 7);
-	printf("%p\n", str);
-	memcpy(str, &str[7], 7);
-	printf("%p\n", str);
+	char	str[] = "Hola Mundo";
+	char	dst[] = "destino";
+	size_t	size = 5;
+
+	ft_memmove(dst, str, size);
+	printf("%s\n", str);
 	return (0);
-}
+}*/

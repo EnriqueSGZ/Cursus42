@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 16:15:28 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/25 12:56:03 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/05/06 20:27:49 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,14 @@ char	*ft_strnstr(const char *str, const char *needle, size_t len)
 	{
 		return ((char *)str);
 	}
-	// Itera sobre str hasta el final o hasta alcanzar len
 	while (str[i] != '\0' && i < len)
 	{
 		j = 0;
-		// Compara str y needle hasta una diferencia o el final de needle
 		while (str[i + j] == needle[j] && needle[j] != '\0' && (i + j) < len)
 		{
 			j++;
 		}
-		if (needle[j] == '\0')// Si encontró needle en str, retorna puntero al comienzo de needle en str
+		if (needle[j] == '\0')
 		{
 			return ((char *)(str + i));
 		}

@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 16:31:39 by ensanche          #+#    #+#             */
-/*   Updated: 2024/04/25 12:59:05 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/05/06 20:27:31 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strrchr(const char *s, int c)
 	{
 		i++;
 	}
-	if (ch == 0)// Si el carácter a buscar es '\0', retorna puntero al final de la cadena
+	if (ch == 0)
 	{
 		return ((char *)&s[i]);
 	}
@@ -32,7 +32,7 @@ char	*ft_strrchr(const char *s, int c)
 		i--;
 		if (s[i] == ch)
 		{
-			return (&((char *)s)[i]);// Retorna un puntero a la posición actual en la cadena
+			return (&((char *)s)[i]);
 		}
 	}
 	return (0);
