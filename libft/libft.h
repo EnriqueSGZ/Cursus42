@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 18:25:40 by ensanche          #+#    #+#             */
-/*   Updated: 2024/05/07 17:14:42 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/05/13 11:41:56 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,6 @@ void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
-void 	*ft_calloc(size_t number, size_t size)
+void	*ft_calloc(size_t number, size_t size);
 
 #endif

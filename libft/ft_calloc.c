@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 16:42:24 by ensanche          #+#    #+#             */
-/*   Updated: 2024/05/07 17:33:21 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/05/13 11:54:36 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,21 +19,29 @@ void	*ft_calloc(size_t number, size_t size)
 {
 	void	*ptr;
 
-	ptr = malloc(number *size);
+	ptr = malloc(number * size);
 	if (ptr == NULL)
 	{
 		return (ptr);
 	}
-	ft_bzero(ptr, number *size);
+	bzero(ptr, number * size);
 	return (ptr);
 }
-
+/*
 int main(void)
 {
-	int	*array = (int *)ft_calloc(3, sizeof(int));
-	
-    *array = 10; *(array + 1) = 20; *(array + 2) = 30;
-    printf("%d %d %d\n", *array, *(array + 1), *(array + 2));
+    int n = 10;
+    int *array;
+    int i = 0;
+
+    array = (int *)ft_calloc(n, sizeof(int));
+    printf("Contenido del array:\n");
+    while (i < n) 
+	{
+        printf("%d ", array[i]);
+        i++;
+    }
+    printf("\n");
     free(array);
-	return (0);
-}
+    return (0);
+}*/
