@@ -6,13 +6,14 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 16:42:24 by ensanche          #+#    #+#             */
-/*   Updated: 2024/05/07 17:25:56 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/05/07 17:33:21 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 void	*ft_calloc(size_t number, size_t size)
 {
