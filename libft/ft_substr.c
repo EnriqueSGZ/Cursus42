@@ -6,35 +6,42 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 13:40:23 by ensanche          #+#    #+#             */
-/*   Updated: 2024/05/15 14:29:34 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/05/15 16:24:52 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
+//#include <stdlib.h>
+//#include <stdio.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char			*ptr;
-	unsigned int	i;
+	size_t			i;
 
-	ptr = malloc(len);
 	i = 0;
-	if (s++)
+	if (start > ft_strlen(s))
 	{
-		while (i < len)
-		{
-			ptr[i] = s[start + i];
-			i++;
-		}
+		len = 0;
+	}
+	if (len > ft_strlen(s) - start)
+	{
+		len = (ft_strlen(s) - start);
+	}
+	ptr = malloc(len + 1);
+	if (ptr == NULL)
+	{
 		return (ptr);
 	}
-	ptr[i] = '\0'
-	else
-		return (NULL);
+	while (s[i] != '\0' && i < len)
+	{
+		ptr[i] = s[start + i];
+		i++;
+	}
+	ptr[i] = '\0';
+	return (ptr);
 }
-
+/*
 int	main(void)
 {
 	char const		*s = "Enrique";
@@ -42,6 +49,5 @@ int	main(void)
 	size_t			len = 3;
 
 	printf("%s\n", ft_substr(s, start, len));
-	//free(s);
 	return (0);
-}
+}*/
