@@ -6,18 +6,17 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 11:55:38 by ensanche          #+#    #+#             */
-/*   Updated: 2024/05/13 16:56:06 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/05/15 13:33:07 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
 char	*ft_strdup(const char *s)
 {
 	char	*ptr;
 	int		size;
-	
+
 	size = ft_strlen(s);
 	ptr = malloc(sizeof(char) * (size + 1));
 	if (ptr == NULL)
