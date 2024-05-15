@@ -6,24 +6,11 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 17:57:14 by ensanche          #+#    #+#             */
-/*   Updated: 2024/05/15 19:36:54 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/05/15 20:48:44 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-
-int	ft_toupper(int c)
-{
-	if (c >= 'a' && c <= 'z')
-	{
-		return (c - 32);
-	}
-	else
-	{
-		return (c);
-	}
-}
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -46,14 +33,17 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	ptr[i] = '\0';
 	return (ptr);
 }
+/*
+char	ft_my_toupper(unsigned int i, char str)
+{
+	return (str - 32);
+}
 
 int	main(void)
 {
-	const char	*s = "Hello";
-	char		*result;
-
-	result = ft_strmapi(s, &ft_toupper);
+	char	str[] = "hello.";
+	printf("%s\n", str);
+	char	*result = ft_strmapi(str, ft_my_toupper);
 	printf("%s\n", result);
-	free(result);
 	return (0);
-}
+}*/
