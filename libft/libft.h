@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 18:25:40 by ensanche          #+#    #+#             */
-/*   Updated: 2024/05/15 20:56:37 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/05/22 10:21:31 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,6 @@ char	*ft_strtrim(char const *s1, char const *set);
 //char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-//void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 //void	ft_putchar_fd(char c, int fd);
 #endif
