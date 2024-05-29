@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 17:59:21 by ensanche          #+#    #+#             */
-/*   Updated: 2024/05/22 10:52:43 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/05/29 19:17:06 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,18 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-
-void ft_putstr(unsigned int i, char *s)
+/*
+void	ft_putstr(unsigned int i, char *s)
 {
 	//evita el warning de variable no utilizada
 	(void)i;
 	write(1, s, 1);
 }
 
-int main(void)
+int	main(void)
 {
-	char *str = "HolaHolita";
+	char	*str = "HolaHolita";
 
 	ft_striteri(str, ft_putstr);
 	return (0);
-}
+}*/
