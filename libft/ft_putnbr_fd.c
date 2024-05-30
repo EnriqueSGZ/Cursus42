@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 20:17:37 by ensanche          #+#    #+#             */
-/*   Updated: 2024/05/30 20:29:05 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/05/30 20:29:42 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	ft_putnbr_fd(int n, int fd)
 	c = n % 10 + '0';
 	ft_putchar_fd(c, fd);
 }
-
+/*
 int	main(void)
 {
 	int		n;
@@ -44,4 +44,4 @@ int	main(void)
 	n = 12345;
 	ft_putnbr_fd(n, 1);
 	return (0);
-}
+}*/
