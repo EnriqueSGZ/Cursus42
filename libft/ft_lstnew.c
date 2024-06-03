@@ -6,10 +6,10 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/03 19:36:32 by ensanche          #+#    #+#             */
-/*   Updated: 2024/06/03 19:37:23 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/06/03 20:33:36 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstnew(void *content)
+t_list	*ft_lstnew(void *content);
