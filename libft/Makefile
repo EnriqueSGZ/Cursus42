@@ -6,7 +6,7 @@
 #    By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/22 18:27:44 by ensanche          #+#    #+#              #
-#    Updated: 2024/06/03 19:13:33 by ensanche         ###   ########.fr        #
+#    Updated: 2024/06/03 20:31:39 by ensanche         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,12 @@ SOURCES = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c\
 		  ft_strtrim.c ft_strmapi.c ft_itoa.c ft_striteri.c ft_putchar_fd.c\
 		  ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_split.c
 		  
-OBJECTS = $(SOURCES:.c=.o)
+FT_FILES_BONUS := ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c\
+			ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c\
+			ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c\
+		  
+OBJ := $(FT_FILES:%.c=%.o)
+OBJ_BONUS := $(FT_FILES_BONUS:%.c=%.o)
 
 CC = gcc
 
