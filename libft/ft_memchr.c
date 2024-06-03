@@ -6,32 +6,32 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 17:11:50 by ensanche          #+#    #+#             */
-/*   Updated: 2024/05/01 18:57:38 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/06/03 19:06:36 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t			i;
-	char			ch;
-	const char		*str;
+	const char	*str;
+	char		ch;
+	size_t		i;
 
-	i = 0;
-	ch = (char) c;
 	str = (const char *)s;
+	ch = (char)c;
+	i = 0;
 	while (i < n)
 	{
 		if (str[i] == ch)
 		{
-			return (&((void *)str)[i]);
+			return (((void *)str) + i);
 		}
 		i++;
 	}
 	return (NULL);
 }
+
 /*
 int	main(void)
 {
