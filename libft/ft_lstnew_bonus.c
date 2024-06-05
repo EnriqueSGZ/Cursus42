@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/03 19:36:32 by ensanche          #+#    #+#             */
-/*   Updated: 2024/06/05 17:44:23 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/06/05 19:21:45 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*list;
+	t_list	*lst;
 
-	list = malloc(sizeof(struct s_list));
-	if (!list)
+	lst = malloc(sizeof(struct s_list));
+	if (!lst)
 	{
 		return (NULL);
 	}
-	list->content = content;
-	list->next = NULL;
-	return (list);
+	lst->content = content;
+	lst->next = NULL;
+	return (lst);
 }
 
 int main(void)
