@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 19:10:05 by ensanche          #+#    #+#             */
-/*   Updated: 2024/06/10 17:42:35 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/06/10 18:14:23 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	while (*lst)
 	{
 		aux = (*lst)->next;
-		ft_lstdelone_bonus(*lst, del);
+		ft_lstdelone(*lst, del);
 		(*lst) = aux;
 	}
 }

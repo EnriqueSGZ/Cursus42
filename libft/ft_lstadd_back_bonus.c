@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 19:09:04 by ensanche          #+#    #+#             */
-/*   Updated: 2024/06/10 17:25:14 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/06/10 18:43:11 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*ult;
 
-	if (!lst)
+	if (*lst == NULL)
 	{
 		(*lst) = new;
 	}
