@@ -6,10 +6,14 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 19:07:33 by ensanche          #+#    #+#             */
-/*   Updated: 2024/06/05 19:18:14 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/06/10 17:24:10 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstadd_front(t_list **lst, t_list *new)
+{
+	new->next = (*lst);
+	(*lst) = new;
+}
