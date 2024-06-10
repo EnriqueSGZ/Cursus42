@@ -6,7 +6,7 @@
 #    By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/22 18:27:44 by ensanche          #+#    #+#              #
-#    Updated: 2024/06/05 19:05:10 by ensanche         ###   ########.fr        #
+#    Updated: 2024/06/10 20:10:22 by ensanche         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,15 +52,17 @@ ft_split.c \
 ft_striteri.c \
 ft_strmapi.c \
 
-FT_FILES_BONUS := ft_lstnew_bonus.c\
-ft_lstadd_front_bonus.c\
-ft_lstsize_bonus.c\
-ft_lstlast_bonus.c\
-ft_lstadd_back_bonus.c\
-ft_lstdelone_bonus.c\
-ft_lstclear_bonus.c\
-ft_lstiter_bonus.c\
-ft_lstmap_bonus.c\
+FT_FILES_BONUS := ft_lstnew_bonus.c \
+ft_lstadd_front_bonus.c \
+ft_lstsize_bonus.c \
+ft_lstlast_bonus.c \
+ft_lstadd_back_bonus.c \
+ft_lstclear_bonus.c \
+ft_lstdelone_bonus.c \
+ft_lstiter_bonus.c \
+ft_lstmap_bonus.c \
+
+FT_FTEST := main.c
 
 INCLUDES := libft.h
 
@@ -71,11 +73,14 @@ all: $(NAME)
 $(NAME) : $(OBJ)
 	$(AR) $(AR_FLAGS) $(NAME) $?
 
+
 %.o: %.c
 	$(CC) $(CC_FLAGS) -c -o $@ $<
 
+
 clean :
 	rm -f $(OBJ) $(OBJ_BONUS)
+
 
 fclean : clean
 	rm -f $(NAME)
