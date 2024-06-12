@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amcortes <amcortes@strudent.42.fr>         +#+  +:+       +#+        */
+/*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/11 14:21:46 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/06/12 19:08:15 by amcortes         ###   ########.fr       */
+/*   Created: 2024/06/12 20:03:27 by ensanche          #+#    #+#             */
+/*   Updated: 2024/06/12 20:03:27 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
 
 #include "get_next_line.h"
 #include <stdio.h>
