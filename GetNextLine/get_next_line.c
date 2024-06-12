@@ -6,11 +6,9 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 20:03:27 by ensanche          #+#    #+#             */
-/*   Updated: 2024/06/12 20:03:27 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/06/12 20:04:17 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #include "get_next_line.h"
 #include <stdio.h>
@@ -114,9 +112,9 @@ char	*get_next_line(int fd)
 
 int	main(void)
 {
-	int fd;
-	char *line;
-	
+	int		fd;
+	char	*line;
+
 	fd = open("prueba.txt", O_RDONLY);
 	/*while ((line = get_next_line(fd)) != NULL)
 	{
@@ -124,7 +122,6 @@ int	main(void)
 		free(line);
 	}*/
 	line = get_next_line(fd);
-	
 	close(fd);
 	return (0);
 }
