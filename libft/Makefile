@@ -6,81 +6,92 @@
 #    By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/22 18:27:44 by ensanche          #+#    #+#              #
-#    Updated: 2024/06/11 15:02:01 by ensanche         ###   ########.fr        #
+#    Updated: 2024/06/12 17:45:55 by ensanche         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a 
+NAME := libft.a
+CC := cc
+CC_FLAGS := -Wall -Werror -Wextra
 
-CFLAGS = -Wall -Wextra -Werror
+AR := ar
+AR_FLAGS := -csr
 
-HEADER = libft.h
-
-SRC = ft_isalpha.c \
-ft_isdigit.c \
-ft_isalnum.c \
-ft_isascii.c \
-ft_isprint.c \
-ft_strlen.c \
-ft_memset.c \
+FT_FILES := ft_atoi.c \
 ft_bzero.c \
+ft_calloc.c \
+ft_isalnum.c \
+ft_isalpha.c \
+ft_memchr.c \
+ft_isascii.c \
+ft_isdigit.c \
+ft_isprint.c \
 ft_memcpy.c \
+ft_memcmp.c \
 ft_memmove.c \
-ft_strlcpy.c \
+ft_memset.c \
+ft_strchr.c \
+ft_strdup.c \
+ft_strjoin.c \
 ft_strlcat.c \
+ft_strlcpy.c \
+ft_strlen.c \
+ft_strncmp.c \
+ft_strnstr.c \
+ft_strrchr.c \
+ft_strtrim.c \
+ft_substr.c \
 ft_tolower.c \
 ft_toupper.c \
-ft_strchr.c \
-ft_strrchr.c \
-ft_strncmp.c \
-ft_memchr.c \
-ft_memcmp.c \
-ft_strnstr.c \
-ft_atoi.c \
-ft_calloc.c \
-ft_strdup.c \
-ft_substr.c \
-ft_strjoin.c \
-ft_strtrim.c \
-ft_split.c \
 ft_itoa.c \
-ft_strmapi.c \
-ft_striteri.c \
 ft_putchar_fd.c \
-ft_putstr_fd.c \
 ft_putendl_fd.c \
-ft_putnbr_fd.c 
+ft_putnbr_fd.c \
+ft_putstr_fd.c \
+ft_split.c \
+ft_striteri.c \
+ft_strmapi.c \
 
-BONUS = ft_lstnew.c \
-ft_lstadd_front.c \
-ft_lstsize.c \
-ft_lstlast.c \
-ft_lstadd_back.c \
-ft_lstdelone.c \
-ft_lstclear.c \
-ft_lstiter.c \
-ft_lstmap.c
+FT_FILES_BONUS := ft_lstnew_bonus.c \
+ft_lstadd_front_bonus.c \
+ft_lstsize_bonus.c \
+ft_lstlast_bonus.c \
+ft_lstadd_back_bonus.c \
+ft_lstclear_bonus.c \
+ft_lstdelone_bonus.c \
+ft_lstiter_bonus.c \
+ft_lstmap_bonus.c \
 
-OBJS = $(SRC:.c=.o) 
-BONUS_OBJS = $(BONUS:.c=.o) 
+FT_FTEST := main.c
 
-all : $(NAME)
+INCLUDES := libft.h
 
-%.o : %.c
-	cc $(CFLAGS) -c -o $@ $<
+OBJ := $(FT_FILES:%.c=%.o)
+OBJ_BONUS := $(FT_FILES_BONUS:%.c=%.o)
 
-$(NAME) : $(OBJS)
-	ar -rcs $(NAME) $? 
+all: $(NAME)
+$(NAME) : $(OBJ)
+	$(AR) $(AR_FLAGS) $(NAME) $?
 
-bonus: $(OBJS) $(BONUS_OBJS)
-	ar -rcs $(NAME) $(OBJS) $(BONUS_OBJS) 
+%.o: %.c
+	$(CC) $(CC_FLAGS) -c -o $@ $<
 
 clean :
-	rm -f $(OBJS)
+	rm -f $(OBJ) $(OBJ_BONUS)
 
 fclean : clean
-	rm -f $(NAME) $(BONUS_OBJS)
+	rm -f $(NAME)
 
-re : all fclean 
+re : fclean all
 
-.PHONY : clean fclean re all bonus
+bonus: $(NAME)
+$(NAME) : $(OBJ) $(OBJ_BONUS)
+	$(AR) $(AR_FLAGS) $(NAME) $?
+
+test:  all
+	$(CC) $(CC_FLAGS) -I $(INCLUDES) -o $@ main.c $(NAME)
+	$(clean)
+
+testc: all test clean
+
+.PHONY: all clean fclean re test bonus
