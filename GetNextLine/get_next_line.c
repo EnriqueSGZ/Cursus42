@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 20:03:27 by ensanche          #+#    #+#             */
-/*   Updated: 2024/06/12 20:04:17 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/06/17 19:57:33 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ char	*ft_readline(char *buffer)
 		i++;
 	}
 	if (buffer[i] == '\n')
-		line[i] = '\n'; //no le metemos nulos porque al usar calloc te mete ya nulo al final
+		line[i] = '\n';//sin nulos xq al usar calloc mete ya nulo al final
 	return (line);
 }
 
@@ -87,7 +87,7 @@ char	*ft_updatebuffer(char *buffer)
 	update = ft_calloc((ft_strlen(buffer) - i + 1), sizeof(char));
 	if (!update)
 		return (ft_free(buffer));
-	i++; // es para que se pase justo al cominezo de la siguiente linea
+	i++;// es para que se pase justo al cominezo de la siguiente linea
 	j = 0;
 	while (buffer[i])
 		update[j++] = buffer[i++];
