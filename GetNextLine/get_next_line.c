@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 20:03:27 by ensanche          #+#    #+#             */
-/*   Updated: 2024/06/17 19:57:33 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/07/22 18:44:03 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,14 @@ char	*ft_readbuffer(char *buffer, int fd)
 			return (NULL);
 	}
 	aux = ft_calloc(BUFFER_SIZE + 1, 1);
-	i = 1; // esto puede ser cualquier num siempre que sea mayor que 0 para entrar en el bucle
-	while ((!ft_strchr(aux, '\n')) && i > 0) // buscamos primera ocurrencia de salto de linea en el aux
+	i = 1;
+	while ((!ft_strchr(aux, '\n')) && i > 0)
 	{
-		i = read(fd, aux, BUFFER_SIZE); //read copia buffersize del fd en aux y devuelve un int con la ultima posicion
+		i = read(fd, aux, BUFFER_SIZE);
 		if (i == -1)
 			return (free(aux), NULL);
-		aux[i] = '\0'; // el string tiene que terminar siempre en nulo
-		buffer = ft_joinfree(buffer, aux); // buffer sale con concatenacion de aux y cada vez se hace más grande
+		aux[i] = '\0';
+		buffer = ft_joinfree(buffer, aux);
 		if (!buffer)
 			return (NULL);
 	}
@@ -59,7 +59,7 @@ char	*ft_readline(char *buffer)
 		return (NULL);
 	while (buffer[i] != '\0' && buffer[i] != '\n')
 		i++;
-	line = (char *)ft_calloc(i + 1 + (buffer[i] == '\n'), 1); // lo de buffer[i] es por si ha metido salto de linea que añada uno más
+	line = (char *)ft_calloc(i + 1 + (buffer[i] == '\n'), 1);
 	if (!line)
 		return (NULL);
 	i = 0;
@@ -69,7 +69,7 @@ char	*ft_readline(char *buffer)
 		i++;
 	}
 	if (buffer[i] == '\n')
-		line[i] = '\n';//sin nulos xq al usar calloc mete ya nulo al final
+		line[i] = '\n';
 	return (line);
 }
 
@@ -87,7 +87,7 @@ char	*ft_updatebuffer(char *buffer)
 	update = ft_calloc((ft_strlen(buffer) - i + 1), sizeof(char));
 	if (!update)
 		return (ft_free(buffer));
-	i++;// es para que se pase justo al cominezo de la siguiente linea
+	i++;
 	j = 0;
 	while (buffer[i])
 		update[j++] = buffer[i++];
@@ -106,22 +106,22 @@ char	*get_next_line(int fd)
 	if (!buffer)
 		return (ft_free(buffer));
 	line = ft_readline(buffer);
-	buffer = ft_updatebuffer(buffer); //aqui mandamos el tocho y vuelve el tocho sin las líneas que vamos quitando/leyendo
+	buffer = ft_updatebuffer(buffer);
 	return (line);
 }
-
+/*
 int	main(void)
 {
 	int		fd;
 	char	*line;
 
 	fd = open("prueba.txt", O_RDONLY);
-	/*while ((line = get_next_line(fd)) != NULL)
+	while ((line = get_next_line(fd)) != NULL)
 	{
 		printf("%s", line);
 		free(line);
-	}*/
+	}
 	line = get_next_line(fd);
 	close(fd);
 	return (0);
-}
+}*/
