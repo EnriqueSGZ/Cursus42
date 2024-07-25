@@ -5,20 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/12 20:01:55 by ensanche          #+#    #+#             */
-/*   Updated: 2024/07/17 13:27:40 by ensanche         ###   ########.fr       */
+/*   Created: 2024/07/25 14:45:09 by ensanche          #+#    #+#             */
+/*   Updated: 2024/07/25 14:45:10 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
-# include <unistd.h>
-# include <fcntl.h>
 # include <stdlib.h>
+# include <sys/types.h>
+# include <sys/uio.h>
+# include <unistd.h>
 # include <stdio.h>
+# include <fcntl.h>
+# include <aio.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 10
+#  define BUFFER_SIZE 42
 # endif
 
 char	*get_next_line(int fd);
