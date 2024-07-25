@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 18:39:26 by ensanche          #+#    #+#             */
-/*   Updated: 2024/07/25 16:26:30 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/07/25 17:48:13 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,7 +113,7 @@ char	*get_next_line(int fd)
 	buffer = ft_updatebuffer(buffer);
 	return (line);
 }
-
+/*
 int	main(void)
 {
 	int		fd;
@@ -129,7 +129,7 @@ int	main(void)
 	}
 	close(fd);
 	return (0);
-}
+}*/
 /*
 int main(int argc, char *argv[])
 {
