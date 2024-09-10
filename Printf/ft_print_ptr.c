@@ -6,11 +6,18 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 13:30:40 by ensanche          #+#    #+#             */
-/*   Updated: 2024/09/10 18:16:15 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/09/10 18:48:20 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+/* #include <stdio.h>
+
+int	ft_print_char(char c)
+{
+	write(1, &c, 1);
+	return (1);
+} */
 
 static int	ft_hexalong(unsigned long n)
 {
@@ -38,8 +45,8 @@ int	ft_print_ptr(unsigned long n)
 	i = 0;
 	if (!n)
 	{
-		write(1, "0x0", 3);
-		return (3);
+		write(1, "(nil)", 5);
+		return (5);
 	}
 	else
 	{
@@ -49,9 +56,11 @@ int	ft_print_ptr(unsigned long n)
 	}
 }
 
-int	main(void)
+/* int	main(void)
 {
-	ft_print_ptr(250);
-	printf("\n%p\n", (void *)250);
+	int	n = 42;
+	int	*ptr = &n;
+	ft_print_ptr((unsigned long)ptr);
+	printf("\n%p\n", (void *)ptr);
 	return (0);
-}
+} */

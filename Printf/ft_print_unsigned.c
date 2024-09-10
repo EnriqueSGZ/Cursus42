@@ -6,18 +6,11 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 11:56:28 by ensanche          #+#    #+#             */
-/*   Updated: 2024/09/10 18:15:48 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/09/10 18:21:03 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
-
-int	ft_print_char(char c)
-{
-	write(1, &c, 1);
-	return (1);
-}
 
 int	ft_print_unsigned(unsigned int n)
 {
