@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 17:51:37 by ensanche          #+#    #+#             */
-/*   Updated: 2024/09/10 17:52:44 by ensanche         ###   ########.fr       */
+/*   Updated: 2024/09/10 19:04:16 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,14 +58,13 @@ int	ft_printf(char const *format, ...)
 	return (size);
 }
 
-/* int	main(void)
+int	main(void)
 {
 	int				num = 42;
 	unsigned int	unum = -42;
 	char			*str = "Hello, World!";
 	char			ch = 'A';
 	void			*ptr = &num;
-
 	ft_printf("String: %s\n", str);
 	ft_printf("Character: %c\n", ch);
 	ft_printf("Decimal: %d\n", num);
@@ -74,7 +73,16 @@ int	ft_printf(char const *format, ...)
 	ft_printf("Hex Low: %x\n", unum);
 	ft_printf("Hex Up: %X\n", unum);
 	ft_printf("Pointer: %p\n", ptr);
-	ft_printf("%%");
+	ft_printf("%%\n");
+	ft_printf("Originals:\n");
+	printf("String: %s\n", str);
+	printf("Character: %c\n", ch);
+	printf("Decimal: %d\n", num);
+	printf("integer: %i\n", num);
+	printf("Unsigned: %u\n", unum);
+	printf("Hex Low: %x\n", unum);
+	printf("Hex Up: %X\n", unum);
+	printf("Pointer: %p\n", ptr);
+	printf("%%");
 	return (0);
 }
- */
