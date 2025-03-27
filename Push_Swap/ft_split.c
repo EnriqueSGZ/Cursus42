@@ -6,7 +6,7 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 17:54:42 by ensanche          #+#    #+#             */
-/*   Updated: 2025/03/25 20:04:26 by ensanche         ###   ########.fr       */
+/*   Updated: 2025/03/27 19:41:14 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,16 +71,4 @@ char	**ft_split(const char *s, char c)
 	result[i] = 0;
 	return (result);
 }
-/*
-int	main(void)
-{
-	char	*str = "*hello**world***bye**planet**";
-	char	**splt;
 
-	splt = ft_split(str, '*');
-	printf("%s", splt[0]);
-	printf("%s", splt[1]);
-	printf("%s", splt[2]);
-	printf("%s", splt[3]);
-	return (0);
-}*/

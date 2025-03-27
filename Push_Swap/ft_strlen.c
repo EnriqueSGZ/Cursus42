@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/05 19:09:04 by ensanche          #+#    #+#             */
-/*   Updated: 2025/03/27 19:03:10 by ensanche         ###   ########.fr       */
+/*   Created: 2024/04/12 16:10:49 by ensanche          #+#    #+#             */
+/*   Updated: 2025/03/27 19:41:25 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *node)
+size_t	ft_strlen(const char *s)
 {
-	t_list	*ult;
+	size_t	i;
 
-	if (*lst == NULL)
+	i = 0;
+	while (s[i] != '\0')
 	{
-		(*lst) = node;
+		i++;
 	}
-	else
-	{
-		ult = *lst;
-		while (ult->next != NULL)
-		{
-			ult = ult->next;
-		}
-		(ult)->next = node;
-	}
+	return (i);
 }
+

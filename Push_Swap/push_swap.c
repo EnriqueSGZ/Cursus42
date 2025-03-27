@@ -6,28 +6,60 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 18:58:49 by ensanche          #+#    #+#             */
-/*   Updated: 2025/03/26 21:20:20 by ensanche         ###   ########.fr       */
+/*   Updated: 2025/03/27 21:03:28 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-//./pushswap "2 -5 6 1 123 1235 654 123 09876"
-//./pushswap 2 5 6 1 123 1235 -654 123 09876
-//./pushswap "212343 5 6 1" 123 1235 654 123 "9 87 6" 
+
+void print_stack(t_list **stack)
+{
+    t_list *aux;
+    aux = *stack;
+    while(aux)
+    {
+        printf("value:%li|positon:%i|index:%i\n", aux->value, aux->position, aux->index);
+        aux = aux->next;
+    }
+}
+void ft_set_positions(t_list **stack)
+{
+    t_list *aux;
+    aux = *stack;
+    int i;
+    i = 1;
+    while(aux)
+    {
+        aux->position = i;
+        i++;
+        aux = aux->next;
+    }
+}
 void ft_pushswap(t_list **a, t_list **b)
+{
+    t_list  *first;
+    t_list  *second;
+    
+    first = *a;
+    second = first->next;
+    
+    first->next = *b;
+    *b = first;
+    *a = second;
+    
+}
 
 void ft_swap(t_list **a)
 {
     t_list  *first;
     t_list  *second;
-    t_list  *third;
-    
+
     first = *a;
     second = first->next;
     
     first->next = second->next;
     second->next = first;
-    a* = second;    
+    *a = second;   
 }
 
 void ft_rev_rotate(t_list **a)
@@ -39,7 +71,7 @@ void ft_rev_rotate(t_list **a)
     first = *a;
     last = *a;
     second_last = NULL;
-    While (last->next != NULL)
+    while (last->next != NULL)
     {
         second_last = last;
         last = last->next;
@@ -48,19 +80,15 @@ void ft_rev_rotate(t_list **a)
     last->next = first;
     *a = last;
 }
-
 void ft_rotate(t_list **a)
 {
 	t_list *first;
 	t_list *last;
-	t_list *second;
 
 	first = *a;
-	second = *a;
-	last = ft_golast(*a);
-	if(second->next != NULL)
-		second = second->next;
-    *(a) = second;
+	last = ft_golast(a);
+	
+    *a = first->next;
     last->next = first;
     first->next = NULL;
 }
@@ -68,8 +96,8 @@ void ft_rotate(t_list **a)
 int main (int argc, char **argv)
 {
 	t_list  *node;
-    t_list **a;
-    t_list **b;
+    t_list  *a;
+    t_list  *b;
     
 	a = NULL;
 	b = NULL;
@@ -79,26 +107,48 @@ int main (int argc, char **argv)
 	int i = 1;
 	int s = 0;
 	char **split;
+   
 	while(argv[i])
 	{
-		split = ft_split(argv[i], ' ');
+        split = ft_split(argv[i], ' ');
 		s = 0;
 		while(split[s])
 		{
-			if(ft_syntax_error(split[s]) || ft_out_of_range(ft_atol(split[s])))
-				return(/* free etc , */ 1);
+			//if(ft_syntax_error(split[s]) || ft_out_of_range(ft_atol(split[s])))
+			//	return(/* free etc , */ 1);
+          
 			node = ft_lstnew(ft_atol(split[s]));
-			ft_lstadd_back(a, node); //si a fuera *a pondrias &a
+			ft_lstadd_back(&a, node); //si a fuera *a pondrias &a
 			s++;
 		}
-		free_split(split);
-		i++;
+        if(split)
+            free_split(split);
+        split = NULL;
+        i++;
 	}
-	if(ft_check_repetidos(a))
-		return(/* free....,  */1);
+    ft_set_positions(&a);
+    print_stack(&a);
+    printf("\nREV ROTATE\n");
+    ft_rev_rotate(&a);
+    print_stack(&a);
+    printf("\nROTATE\n");
+    ft_rotate(&a);
+    print_stack(&a);
+    //printf("\nSWAP\n");
+    //ft_swap(&a);
+    //print_stack(&a);
+    printf("\nPushSWAP\n");
+    ft_pushswap(&a, &b);
+    print_stack(&a);
+    
+    
+    
+    
+/* 	if(ft_check_repetidos(a))
+		return(free...., 1);
     ft_lstsize(*a);
 	ft_jugamos(a, b);
-    return(0);
+    return(0); */
 	
     //node = ft_lstnew(ft_atol(split[i]));
     //parseo:dobles? INT MAX/MIN? Sintaxis(-1a, perro, --24) */
@@ -112,5 +162,4 @@ int main (int argc, char **argv)
    split2[1] = "segund";
    write(1, *split2, ft_strlen(*split2));
    write(1, split2[1], ft_strlen(split2[1])); */
-  
 }

@@ -1,32 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/05 19:09:04 by ensanche          #+#    #+#             */
-/*   Updated: 2025/03/27 19:03:10 by ensanche         ###   ########.fr       */
+/*   Created: 2025/03/27 19:47:33 by ensanche          #+#    #+#             */
+/*   Updated: 2025/03/27 19:47:52 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *node)
+long	ft_atol(const char *str)
 {
-	t_list	*ult;
+	long	result;
+	int		sign;
+	int		i;
 
-	if (*lst == NULL)
+	result = 0;
+	sign = 1;
+	i = 0;
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
+		i++;
+	if (str[i] == '-')
 	{
-		(*lst) = node;
+		sign = -1;
+		i++;
 	}
-	else
+	else if (str[i] == '+')
+		i++;
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		ult = *lst;
-		while (ult->next != NULL)
-		{
-			ult = ult->next;
-		}
-		(ult)->next = node;
+		result = result * 10 + (str[i] - '0');
+		i++;
 	}
+	return (result * sign);
 }

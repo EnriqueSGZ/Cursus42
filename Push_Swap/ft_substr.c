@@ -1,32 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/05 19:09:04 by ensanche          #+#    #+#             */
-/*   Updated: 2025/03/27 19:03:10 by ensanche         ###   ########.fr       */
+/*   Created: 2024/05/15 13:40:23 by ensanche          #+#    #+#             */
+/*   Updated: 2025/03/27 19:41:45 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *node)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	t_list	*ult;
+	char			*ptr;
+	size_t			i;
 
-	if (*lst == NULL)
+	i = 0;
+	if (start > ft_strlen(s))
 	{
-		(*lst) = node;
+		len = 0;
 	}
-	else
+	if (len > ft_strlen(s) - start)
 	{
-		ult = *lst;
-		while (ult->next != NULL)
-		{
-			ult = ult->next;
-		}
-		(ult)->next = node;
+		len = (ft_strlen(s) - start);
 	}
+	ptr = malloc(len + 1);
+	if (ptr == NULL)
+	{
+		return (ptr);
+	}
+	while (s[i] != '\0' && i < len)
+	{
+		ptr[i] = s[start + i];
+		i++;
+	}
+	ptr[i] = '\0';
+	return (ptr);
 }
+
