@@ -1,17 +1,55 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_utils.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/15 17:54:42 by ensanche          #+#    #+#             */
-/*   Updated: 2025/03/27 19:41:14 by ensanche         ###   ########.fr       */
+/*   Created: 2025/04/07 21:41:33 by ensanche          #+#    #+#             */
+/*   Updated: 2025/04/07 21:42:31 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	char			*ptr;
+	size_t			i;
+
+	i = 0;
+	if (start > ft_strlen(s))
+	{
+		len = 0;
+	}
+	if (len > ft_strlen(s) - start)
+	{
+		len = (ft_strlen(s) - start);
+	}
+	ptr = malloc(len + 1);
+	if (ptr == NULL)
+	{
+		return (ptr);
+	}
+	while (s[i] != '\0' && i < len)
+	{
+		ptr[i] = s[start + i];
+		i++;
+	}
+	ptr[i] = '\0';
+	return (ptr);
+}
+size_t	ft_strlen(const char *s)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
 static size_t	ft_countwords(const char *s, char c)
 {
 	size_t	words;
@@ -71,4 +109,3 @@ char	**ft_split(const char *s, char c)
 	result[i] = 0;
 	return (result);
 }
-
