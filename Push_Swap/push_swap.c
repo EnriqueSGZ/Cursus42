@@ -6,35 +6,11 @@
 /*   By: ensanche <ensanche@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 18:58:49 by ensanche          #+#    #+#             */
-/*   Updated: 2025/03/27 21:03:28 by ensanche         ###   ########.fr       */
+/*   Updated: 2025/04/07 19:40:40 by ensanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void print_stack(t_list **stack)
-{
-    t_list *aux;
-    aux = *stack;
-    while(aux)
-    {
-        printf("value:%li|positon:%i|index:%i\n", aux->value, aux->position, aux->index);
-        aux = aux->next;
-    }
-}
-void ft_set_positions(t_list **stack)
-{
-    t_list *aux;
-    aux = *stack;
-    int i;
-    i = 1;
-    while(aux)
-    {
-        aux->position = i;
-        i++;
-        aux = aux->next;
-    }
-}
 void ft_pushswap(t_list **a, t_list **b)
 {
     t_list  *first;
@@ -91,6 +67,30 @@ void ft_rotate(t_list **a)
     *a = first->next;
     last->next = first;
     first->next = NULL;
+}
+
+void print_stack(t_list **stack)
+{
+    t_list *aux;
+    aux = *stack;
+    while(aux)
+    {
+        printf("value:%li|positon:%i|index:%i\n", aux->value, aux->position, aux->index);
+        aux = aux->next;
+    }
+}
+void ft_set_positions(t_list **stack)
+{
+    t_list *aux;
+    aux = *stack;
+    int i;
+    i = 1;
+    while(aux)
+    {
+        aux->position = i;
+        i++;
+        aux = aux->next;
+    }
 }
 
 int main (int argc, char **argv)
