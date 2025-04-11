@@ -22,12 +22,12 @@ int	ft_isalnum(int c)
 	}
 	return (0);
 }
-/*
-int	main(void)
+
+/* int	main(void)
 {
     char	c;
 
-	c = '8';
+	c = ' ';
 	printf("%d\n", (ft_isalnum(c)));
 	return (0);
-}*/
+} */

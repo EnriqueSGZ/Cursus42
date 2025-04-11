@@ -25,8 +25,8 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-/*
-int	main(void)
+
+/* int	main(void)
 {
 	char	str[] = "Hola buenas";
 	size_t	size = 4;
@@ -34,4 +34,4 @@ int	main(void)
 	ft_bzero(str, size);
 	printf("%s\n", str);
 	return (0);
-}*/
+} */

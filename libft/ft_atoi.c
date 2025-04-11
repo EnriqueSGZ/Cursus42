@@ -23,13 +23,12 @@ int	ft_atoi(const char *str)
 	i = 0;
 	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
 		i++;
-	if (str[i] == '-')
+	while (str[i] == '-' || str[i] == '+')
 	{
-		sign = -1;
+		if (str[i] == '-')
+			sign = -sign;
 		i++;
 	}
-	else if (str[i] == '+')
-		i++;
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		result = result * 10 + (str[i] - '0');
@@ -37,11 +36,12 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
-/*
-int	main(void)
+
+/* int	main(void)
 {
-	char	*str = "   -+-+-12354";
+	char	*str = "   -+-+--12354";
 
 	printf("%d\n", ft_atoi(str));
 	return (0);
-}*/
+}
+ */
