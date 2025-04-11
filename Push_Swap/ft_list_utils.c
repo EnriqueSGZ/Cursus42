@@ -67,12 +67,8 @@ t_list	*ft_golast(t_list **lst)
     t_list *aux;
     aux = *lst;
 	if (!lst || !aux)
-	{
 		return (NULL);
-	}
 	while (aux->next != NULL)
-	{
 		aux = aux->next;
-	}
 	return (aux);
 }

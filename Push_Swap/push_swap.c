@@ -102,7 +102,7 @@ int main (int argc, char **argv)
     ft_swap(&a);
     print_stack(&a);
     printf("\nPushSWAP\n");
-    ft_pushswap(&a, &b);
+    ft_push(&a, &b);
     print_stack(&a);
     printf("\nSTACkB\n");
     print_stack(&b);

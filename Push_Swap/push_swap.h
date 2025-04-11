@@ -26,4 +26,9 @@ char	**ft_split(const char *s, char c);
 void	free_split(char **split);
 size_t	ft_strlen(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+void 	ft_push(t_list **a, t_list **b);
+void 	ft_swap(t_list **a);
+void 	ft_rev_rotate(t_list **a);
+void 	ft_rotate(t_list **a);
+
 #endif
